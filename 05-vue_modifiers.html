@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJs Modifiers</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <form v-on:submit.prevent="saveData">
+      <input type="text" name="test">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        saveData: function(event) {
+
+        }
+      },
+    })
+  </script>
+</body>
+</html>
