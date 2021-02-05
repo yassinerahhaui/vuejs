@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJs Modifiers</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <div v-on:mouseover.self="rect1" style="background: blue; width: 200px; height: 200px;">
+      <div v-on:mouseover="rect2" style="background: red; width: 100px; height: 100px;"></div>
+    </div>
+    <hr>
+    <div v-on:mouseover.capture="rect3" style="background: yellow; width: 200px; height: 200px;">
+      <div v-on:mouseover="rect4" style="background: green; width: 100px; height: 100px;"></div>
+    </div>
+    <hr>
+    <div v-on:mouseover.once="rect5" style="background: orange; width: 200px; height: 200px;">
+      <div v-on:mouseover="rect6" style="background: pink; width: 100px; height: 100px;"></div>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        rect1: function() {
+          console.log('hover on rect1');
+        },
+        rect2: function() {
+          console.log('hover on rect2');
+        },
+        rect3: function() {
+          console.log('hover on rect3');
+        },
+        rect4: function() {
+          console.log('hover on rect4');
+        },
+        rect5: function() {
+          console.log('hover on rect5');
+        },
+        rect6: function() {
+          console.log('hover on rect6');
+        }
+      },
+    })
+  </script>
+</body>
+</html>
